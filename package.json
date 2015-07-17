@@ -1,0 +1,46 @@
+{
+  "name": "micro-req",
+  "main": "index.js",
+  "version": "0.0.0",
+  "description": "Tiny (bytes and API) http interface for Node and the browser",
+  "license": "MIT",
+  "browser": {
+    "./send.js": "./xhr.js"
+  },
+  "repository": "bendrucker/micro-req",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "keywords": [
+    "http",
+    "node",
+    "browser",
+    "tiny",
+    "micro",
+    "xhr"
+  ],
+  "devDependencies": {
+    "tape": "^4.0.0",
+    "standard": "^4.0.0"
+  },
+  "files": [
+    "index.js",
+    "error.js",
+    "send.js",
+    "xhr.js"
+  ],
+  "dependencies": {
+    "builtin-status-codes": "~1.0.0",
+    "got": "~3.3.1",
+    "inherits": "~2.0.1",
+    "nested-error-stacks": "~1.0.0",
+    "simple-format": "~1.0.0",
+    "xhr": "~2.0.2",
+    "xtend": "~4.0.0"
+  }
+}
