@@ -13,32 +13,96 @@ $ npm install --save micro-req
 ## Usage
 
 ```js
-var microReq = require('micro-req')
+var request = require('micro-req')
 
-microReq('input')
-//=> output
+request('http://apple.com', console.log)
+//=> {body: '<html>...</html>', statusCode: 200, headers: {...}}
 ```
 
 ## API
 
-#### `microReq(input, [options])` -> `output`
+#### `request(url, [options], callback)` -> `undefined`
 
-##### input
+##### url
 
 *Required*  
 Type: `string`
 
-Lorem ipsum.
+The URL to request.
 
 ##### options
 
-###### foo
+###### method
+
+Type: `string`  
+Default: `'GET'`
+
+The HTTP method to use to perform the request.
+
+###### headers
+
+Type: `object`  
+Default: `{}`
+
+HTTP headers.
+
+###### json
 
 Type: `boolean`  
 Default: `false`
 
-Lorem ipsum.
+When `true`, the `Accept` and `Content-Type` headers will be sent as `'application/json'`, the request body will be passed to `JSON.stringify` and the response will be parsed with `JSON.parse`.
 
+
+###### body
+
+Type: `any`
+
+The request body to transmit.
+
+###### timeout
+
+Type: `number`  
+Default: `0`
+
+A request timeout to apply in milliseconds. Timeouts are considered an error.
+
+#### callback
+
+*Required*  
+Type: `function`  
+Arguments: `err, response`
+
+The `response` contains:
+
+###### body
+
+Type: `any`
+
+The parsed response body.
+
+###### statusCode
+
+Type: `number`
+
+The HTTP response code.
+
+###### headers
+
+Type: `object`
+
+The HTTP response headers.
+
+---
+
+#### `request.get(url, [options], callback)`
+#### `request.post(url, [options], callback)`
+#### `request.put(url, [options], callback)`
+#### `request.patch(url, [options], callback)`
+#### `request.head(url, [options], callback)`
+#### `request.delete(url, [options], callback)`
+
+Convenience methods instead of setting `options.method` directly.
 
 ## License
 
