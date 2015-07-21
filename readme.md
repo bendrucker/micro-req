@@ -2,6 +2,7 @@
 
 > Tiny (bytes and API) http interface for Node and the browser
 
+At 3.5k minified and gzipped, you get Node-compatible code without the ~50kb most Node HTTP libraries weigh when browserified. The byte savings mostly comes from abandoning support for streaming HTTP, Buffers, and other features.
 
 ## Install
 
