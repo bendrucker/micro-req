@@ -1,7 +1,7 @@
 {
   "name": "micro-req",
   "main": "index.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny (bytes and API) http interface for Node and the browser",
   "license": "MIT",
   "browser": {
