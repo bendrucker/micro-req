@@ -1,4 +1,6 @@
-# micro-req [![Build Status](https://travis-ci.org/bendrucker/micro-req.svg?branch=master)](https://travis-ci.org/bendrucker/micro-req)
+# [deprecated] micro-req [![Build Status](https://travis-ci.org/bendrucker/micro-req.svg?branch=master)](https://travis-ci.org/bendrucker/micro-req)
+
+**Deprecated, use [xhr-request](https://github.com/jam3/xhr-request) instead. Same goal, even smaller API!**
 
 > Tiny (bytes and API) http interface for Node and the browser
 
